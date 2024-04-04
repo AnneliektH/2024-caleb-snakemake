@@ -1,0 +1,3 @@
+results/raw_reads/*.gz
+results/clean_reads
+resources/*

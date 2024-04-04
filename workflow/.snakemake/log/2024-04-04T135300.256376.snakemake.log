@@ -1,0 +1,44 @@
+Building DAG of jobs...
+Creating conda environment envs/fastp.yml...
+Downloading and installing remote packages.
+Environment for /group/ctbrowngrp2/scratch/annie/2024-caleb-snakemake/workflow/rules/../envs/fastp.yml created (location: .snakemake/conda/e38c102d001b708f502ea70e846e5cb9_)
+Using shell: /usr/bin/bash
+Provided cores: 6
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=30000
+Job stats:
+job      count
+-----  -------
+all          1
+fastp        1
+total        2
+
+Select jobs to execute...
+
+[Thu Apr  4 13:53:27 2024]
+rule fastp:
+    input: ../results/raw_reads/PRRA_100_S7_L005_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L006_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L007_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L008_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L005_R2_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L006_R2_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L007_R2_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L008_R2_001.fastq.gz
+    output: ../results/clean_reads/PRRA_100_S7_R1.fq.gz, ../results/clean_reads/PRRA_100_S7_R2.fq.gz
+    jobid: 1
+    reason: Missing output files: ../results/clean_reads/PRRA_100_S7_R1.fq.gz
+    wildcards: sample=PRRA_100_S7
+    threads: 6
+    resources: tmpdir=/tmp
+
+Activating conda environment: .snakemake/conda/e38c102d001b708f502ea70e846e5cb9_
+[Thu Apr  4 14:00:40 2024]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Thu Apr  4 14:00:40 2024]
+localrule all:
+    input: ../results/clean_reads/PRRA_100_S7_R1.fq.gz
+    jobid: 0
+    reason: Input files updated by another job: ../results/clean_reads/PRRA_100_S7_R1.fq.gz
+    resources: tmpdir=/tmp
+
+[Thu Apr  4 14:00:40 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2024-04-04T135300.256376.snakemake.log

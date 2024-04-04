@@ -1,0 +1,20 @@
+# imports
+import os
+
+# Define samples
+SAMPLES, = glob_wildcards('../results/raw_reads/{ident}_L005_R1_001.fastq.gz')
+
+# include snakefiles
+include: "rules/fastp.smk"
+include: "rules/megahit.smk"
+include: "rules/megablast.smk"
+
+# write to wildcards
+wildcard_constraints:
+    sample='\w+',
+
+# specifies the final output file 
+rule all:
+    input:
+   #     expand('../results/clean_reads/{ident}_R1.fq.gz', ident=SAMPLES),
+        expand('../results/megablast/{ident}_ntviruses.tsv', ident=SAMPLES),

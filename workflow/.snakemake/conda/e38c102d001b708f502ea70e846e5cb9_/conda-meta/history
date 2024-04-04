@@ -1,0 +1,12 @@
+==> 2024-04-04 13:53:27 <==
+# cmd: /home/amhorst/mambaforge/condabin/mamba create --quiet --file /group/ctbrowngrp2/scratch/annie/2024-caleb-snakemake/workflow/.snakemake/conda/e38c102d001b708f502ea70e846e5cb9_.yaml --prefix /group/ctbrowngrp2/scratch/annie/2024-caleb-snakemake/workflow/.snakemake/conda/e38c102d001b708f502ea70e846e5cb9_
+# conda version: 23.1.0
++bioconda/linux-64::fastp-0.22.0-h2e03b76_0
++conda-forge/linux-64::_libgcc_mutex-0.1-conda_forge
++conda-forge/linux-64::_openmp_mutex-4.5-2_gnu
++conda-forge/linux-64::libgcc-ng-13.2.0-h807b86a_5
++conda-forge/linux-64::libgomp-13.2.0-h807b86a_5
++conda-forge/linux-64::libstdcxx-ng-13.2.0-h7e041cc_5
++conda-forge/linux-64::libzlib-1.2.13-hd590300_5
++conda-forge/linux-64::zlib-1.2.13-hd590300_5
+# update specs: ['_libgcc_mutex==0.1=conda_forge', '_openmp_mutex==4.5=2_gnu', 'fastp==0.22.0=h2e03b76_0', 'libgcc-ng==13.2.0=h807b86a_5', 'libgomp==13.2.0=h807b86a_5', 'libstdcxx-ng==13.2.0=h7e041cc_5', 'libzlib==1.2.13=hd590300_5', 'zlib==1.2.13=hd590300_5']

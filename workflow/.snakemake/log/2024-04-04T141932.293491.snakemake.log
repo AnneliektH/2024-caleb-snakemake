@@ -1,0 +1,42 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 6
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=30000
+Job stats:
+job         count
+--------  -------
+all             1
+assemble        1
+fastp           1
+total           3
+
+Select jobs to execute...
+
+[Thu Apr  4 14:19:34 2024]
+rule fastp:
+    input: ../results/raw_reads/PRRA_100_S7_L005_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L006_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L007_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L008_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L005_R2_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L006_R2_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L007_R2_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L008_R2_001.fastq.gz
+    output: ../results/raw_reads/PRRA_100_S7_R1.fq.gz, ../results/raw_reads/PRRA_100_S7_R2.fq.gz, ../results/clean_reads/PRRA_100_S7_R1.fq.gz, ../results/clean_reads/PRRA_100_S7_R2.fq.gz, ../results/clean_reads/PRRA_100_S7.html
+    jobid: 1
+    reason: Missing output files: ../results/clean_reads/PRRA_100_S7_R1.fq.gz, ../results/clean_reads/PRRA_100_S7_R2.fq.gz
+    wildcards: sample=PRRA_100_S7
+    threads: 6
+    resources: tmpdir=/tmp
+
+Activating conda environment: .snakemake/conda/e38c102d001b708f502ea70e846e5cb9_
+[Thu Apr  4 14:19:35 2024]
+Error in rule fastp:
+    jobid: 1
+    input: ../results/raw_reads/PRRA_100_S7_L005_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L006_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L007_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L008_R1_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L005_R2_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L006_R2_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L007_R2_001.fastq.gz, ../results/raw_reads/PRRA_100_S7_L008_R2_001.fastq.gz
+    output: ../results/raw_reads/PRRA_100_S7_R1.fq.gz, ../results/raw_reads/PRRA_100_S7_R2.fq.gz, ../results/clean_reads/PRRA_100_S7_R1.fq.gz, ../results/clean_reads/PRRA_100_S7_R2.fq.gz, ../results/clean_reads/PRRA_100_S7.html
+    conda-env: /group/ctbrowngrp2/scratch/annie/2024-caleb-snakemake/workflow/.snakemake/conda/e38c102d001b708f502ea70e846e5cb9_
+    shell:
+        
+        cat ../results/raw_reads/PRRA_100_S7_L005_R1_001.fastq.gz ../results/raw_reads/PRRA_100_S7_L006_R1_001.fastq.gz ../results/raw_reads/PRRA_100_S7_L007_R1_001.fastq.gz ../results/raw_reads/PRRA_100_S7_L008_R1_001.fastq.gz > ../results/raw_reads/PRRA_100_S7_R1.fq.gz         cat ../results/raw_reads/PRRA_100_S7_L005_R2_001.fastq.gz ../results/raw_reads/PRRA_100_S7_L006_R2_001.fastq.gz ../results/raw_reads/PRRA_100_S7_L007_R2_001.fastq.gz ../results/raw_reads/PRRA_100_S7_L008_R2_001.fastq.gz > ../results/raw_reads/PRRA_100_S7_R2.fq.gz         fastp -i ../results/raw_reads/PRRA_100_S7_R1.fq.gz         -I ../results/raw_reads/PRRA_100_S7_R2.fq.gz         -o ../results/clean_reads/PRRA_100_S7_R1.fq.gz -O ../results/clean_reads/PRRA_100_S7_R2.fq.gz --thread 6 -h ../results/clean_reads/PRRA_100_S7.html
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job fastp since they might be corrupted:
+../results/raw_reads/PRRA_100_S7_R1.fq.gz, ../results/raw_reads/PRRA_100_S7_R2.fq.gz
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-04-04T141932.293491.snakemake.log
